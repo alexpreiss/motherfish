@@ -2,6 +2,7 @@ import React from 'react'
 import SpotifyPlayer from 'react-spotify-player'
 
 import blood from './images/blood.jpg'
+import spotifyLogo from './images/logo-spotify.png'
 
 function App () {
   return (
@@ -54,10 +55,40 @@ function App () {
           }}
         >
           <SpotifyPlayer
-            size={{ height: '80px', width: '70%' }}
+            size={{ height: '80px', width: '75%' }}
             uri="spotify:track:6TEk7dTCl7wqQRVBSkKhik"
           />
         </div>
+
+        <a
+          href="https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg"
+          style={{
+            width: '75%',
+            background: 'white',
+            marginTop: '30px',
+            color: 'black',
+            display: 'flex',
+            alignItems: 'center',
+            padding: '20px 0px',
+            justifyContent: 'space-around',
+            textDecoration: 'none'
+          }}
+        >
+          <div style={{ width: '33%' }}>
+            <img
+              alt="spotify logo"
+              src={spotifyLogo}
+              style={{ height: '40px', marginLeft: '20px' }}
+            />
+          </div>
+          <div
+            style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}
+          >
+            <div>Spotify</div>
+          </div>
+          <div style={{ width: '33%', color: 'white' }}>empty</div>
+        </a>
+
         {
           // <div
           //   style={{
