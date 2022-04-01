@@ -75,7 +75,7 @@ function App () {
           color: 'white',
           zIndex: '3',
           width: '100%',
-          marginBottom: '50px'
+          paddingBottom: '150px'
         }}
       >
         <div style={{ marginTop: '50px', fontSize: '30px' }}>
