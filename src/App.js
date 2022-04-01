@@ -25,7 +25,13 @@ function link (href, imgSrc, text) {
         textDecoration: 'none'
       }}
     >
-      <div style={{ width: '33%' }}>
+      <div
+        style={{
+          width: '33%',
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
         <img
           alt="spotify logo"
           src={imgSrc}
