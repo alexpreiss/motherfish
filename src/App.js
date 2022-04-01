@@ -127,7 +127,7 @@ function App () {
           'SoundCloud'
         )}
 
-        {link('https://tiktok.com/alex.preiss', tiktokLogo, 'TikTok')}
+        {link('https://www.tiktok.com/@alex.preiss/', tiktokLogo, 'TikTok')}
 
         {link(
           'https://instagram.com/alex._.preiss',
