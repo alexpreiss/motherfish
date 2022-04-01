@@ -4,6 +4,7 @@ import SpotifyPlayer from 'react-spotify-player'
 import blood from './images/blood.jpg'
 import spotifyLogo from './images/logo-spotify.png'
 import appleMusicLogo from './images/logo-apple-music.png'
+import youtubeLogo from './images/logo-youtube.png'
 
 function link (href, imgSrc, text) {
   return (
@@ -102,6 +103,12 @@ function App () {
           'https://music.apple.com/us/artist/alex-preiss/1555415354',
           appleMusicLogo,
           'Apple Music'
+        )}
+
+        {link(
+          'https://www.youtube.com/c/motherfish',
+          youtubeLogo,
+          'YouTube / Live Stream'
         )}
 
         {
