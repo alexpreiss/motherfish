@@ -5,6 +5,9 @@ import blood from './images/blood.jpg'
 import spotifyLogo from './images/logo-spotify.png'
 import appleMusicLogo from './images/logo-apple-music.png'
 import youtubeLogo from './images/logo-youtube.png'
+import soundcloudLogo from './images/logo-sound-cloud.png'
+import instagramLogo from './images/logo-instagram.png'
+import tiktokLogo from './images/logo-tiktok.png'
 
 function link (href, imgSrc, text) {
   return (
@@ -71,7 +74,8 @@ function App () {
           position: 'absolute',
           color: 'white',
           zIndex: '3',
-          width: '100%'
+          width: '100%',
+          marginBottom: '50px'
         }}
       >
         <div style={{ marginTop: '50px', fontSize: '30px' }}>
@@ -109,6 +113,20 @@ function App () {
           'https://www.youtube.com/c/motherfish',
           youtubeLogo,
           'YouTube / Live Stream'
+        )}
+
+        {link(
+          'https://soundcloud.com/alexspreiss',
+          soundcloudLogo,
+          'SoundCloud'
+        )}
+
+        {link('https://tiktok.com/alex.preiss', tiktokLogo, 'TikTok')}
+
+        {link(
+          'https://instagram.com/alex._.preiss',
+          instagramLogo,
+          'Instagram'
         )}
 
         {
