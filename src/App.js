@@ -3,6 +3,38 @@ import SpotifyPlayer from 'react-spotify-player'
 
 import blood from './images/blood.jpg'
 import spotifyLogo from './images/logo-spotify.png'
+import appleMusicLogo from './images/logo-apple-music.png'
+
+function link (href, imgSrc, text) {
+  return (
+    <a
+      href={href}
+      style={{
+        width: '75%',
+        background: 'white',
+        marginTop: '30px',
+        color: 'black',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '20px 0px',
+        justifyContent: 'space-around',
+        textDecoration: 'none'
+      }}
+    >
+      <div style={{ width: '33%' }}>
+        <img
+          alt="spotify logo"
+          src={imgSrc}
+          style={{ height: '40px', marginLeft: '20px' }}
+        />
+      </div>
+      <div style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}>
+        <div>{text}</div>
+      </div>
+      <div style={{ width: '33%', color: 'white' }}></div>
+    </a>
+  )
+}
 
 function App () {
   return (
@@ -60,34 +92,17 @@ function App () {
           />
         </div>
 
-        <a
-          href="https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg"
-          style={{
-            width: '75%',
-            background: 'white',
-            marginTop: '30px',
-            color: 'black',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '20px 0px',
-            justifyContent: 'space-around',
-            textDecoration: 'none'
-          }}
-        >
-          <div style={{ width: '33%' }}>
-            <img
-              alt="spotify logo"
-              src={spotifyLogo}
-              style={{ height: '40px', marginLeft: '20px' }}
-            />
-          </div>
-          <div
-            style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}
-          >
-            <div>Spotify</div>
-          </div>
-          <div style={{ width: '33%', color: 'white' }}>empty</div>
-        </a>
+        {link(
+          'https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg',
+          spotifyLogo,
+          'Spotify'
+        )}
+
+        {link(
+          'https://music.apple.com/us/artist/alex-preiss/1555415354',
+          appleMusicLogo,
+          'Apple Music'
+        )}
 
         {
           // <div
