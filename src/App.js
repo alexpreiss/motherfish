@@ -8,6 +8,7 @@ import youtubeLogo from './images/logo-youtube.png'
 import soundcloudLogo from './images/logo-sound-cloud.png'
 import instagramLogo from './images/logo-instagram.png'
 import tiktokLogo from './images/logo-tiktok.png'
+import selfControlCover from './images/self-control-art.JPEG'
 
 function link (href, imgSrc, text) {
   return (
@@ -89,12 +90,58 @@ function App () {
           alex preiss || motherfish
         </div>
 
+        <a
+          href="https://distrokid.com/hyperfollow/alexpreiss/self-control"
+          style={{
+            display: 'flex',
+            width: '75%',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginTop: '50px',
+            background: 'white',
+            padding: '20px 0px',
+            textDecoration: 'none'
+          }}
+        >
+          <img
+            style={{ height: '150px' }}
+            alt="self control cover"
+            src={selfControlCover}
+          />
+          <div
+            style={{
+              fontWeight: 'bold',
+              color: 'black',
+              marginTop: '15px'
+            }}
+          >
+            self control
+          </div>
+          <div
+            style={{
+              color: 'black',
+              marginTop: '5px'
+            }}
+          >
+            Releases May 1st
+          </div>
+          <div
+            style={{
+              color: 'black',
+              marginTop: '10px',
+              fontSize: '10px'
+            }}
+          >
+            Click here to Pre-save
+          </div>
+        </a>
+
         <div
           style={{
             width: '100%',
             display: 'flex',
             justifyContent: 'center',
-            marginTop: '50px'
+            marginTop: '30px'
           }}
         >
           <SpotifyPlayer
