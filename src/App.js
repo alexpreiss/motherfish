@@ -91,7 +91,7 @@ function App () {
         </div>
 
         <a
-          href="https://distrokid.com/hyperfollow/alexpreiss/self-control"
+          href="https://presave.io/t/self-control"
           style={{
             display: 'flex',
             width: '75%',
