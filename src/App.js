@@ -8,7 +8,6 @@ import youtubeLogo from './images/logo-youtube.png'
 import soundcloudLogo from './images/logo-sound-cloud.png'
 import instagramLogo from './images/logo-instagram.png'
 import tiktokLogo from './images/logo-tiktok.png'
-import selfControlCover from './images/self-control-art.JPEG'
 
 function link (href, imgSrc, text) {
   return (
@@ -103,7 +102,6 @@ function App () {
             uri="spotify:track:1dHbJMZhZiN3tUfHg8NRjR"
           />
         </div>
-
 
         <div
           style={{
