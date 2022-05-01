@@ -90,51 +90,20 @@ function App () {
           alex preiss || motherfish
         </div>
 
-        <a
-          href="https://presave.io/t/self-control"
+        <div
           style={{
+            width: '100%',
             display: 'flex',
-            width: '75%',
-            flexDirection: 'column',
-            alignItems: 'center',
-            marginTop: '50px',
-            background: 'white',
-            padding: '20px 0px',
-            textDecoration: 'none'
+            justifyContent: 'center',
+            marginTop: '30px'
           }}
         >
-          <img
-            style={{ height: '150px' }}
-            alt="self control cover"
-            src={selfControlCover}
+          <SpotifyPlayer
+            size={{ height: '80px', width: '75%' }}
+            uri="spotify:track:1dHbJMZhZiN3tUfHg8NRjR"
           />
-          <div
-            style={{
-              fontWeight: 'bold',
-              color: 'black',
-              marginTop: '15px'
-            }}
-          >
-            self control
-          </div>
-          <div
-            style={{
-              color: 'black',
-              marginTop: '5px'
-            }}
-          >
-            Releases May 1st
-          </div>
-          <div
-            style={{
-              color: 'black',
-              marginTop: '10px',
-              fontSize: '10px'
-            }}
-          >
-            Click here to Pre-save
-          </div>
-        </a>
+        </div>
+
 
         <div
           style={{
