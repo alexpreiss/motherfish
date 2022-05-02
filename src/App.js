@@ -8,6 +8,7 @@ import youtubeLogo from './images/logo-youtube.png'
 import soundcloudLogo from './images/logo-sound-cloud.png'
 import instagramLogo from './images/logo-instagram.png'
 import tiktokLogo from './images/logo-tiktok.png'
+import twitchLogo from './images/logo-twitch.png'
 
 function link (href, imgSrc, text) {
   return (
@@ -129,11 +130,9 @@ function App () {
           'Apple Music'
         )}
 
-        {link(
-          'https://www.youtube.com/c/motherfish',
-          youtubeLogo,
-          'YouTube / Live Stream'
-        )}
+        {link('https://www.twitch.tv/mothermish/', twitchLogo, 'Twitch')}
+
+        {link('https://www.youtube.com/c/motherfish', youtubeLogo, 'YouTube')}
 
         {link(
           'https://soundcloud.com/alexspreiss',
