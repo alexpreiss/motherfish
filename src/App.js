@@ -16,6 +16,7 @@ function link (href, imgSrc, text) {
       href={href}
       style={{
         width: '75%',
+        maxWidth: '800px',
         background: 'white',
         marginTop: '30px',
         color: 'black',
@@ -98,10 +99,12 @@ function App () {
             marginTop: '30px'
           }}
         >
-          <SpotifyPlayer
-            size={{ height: '80px', width: '75%' }}
-            uri="spotify:track:1dHbJMZhZiN3tUfHg8NRjR"
-          />
+          <div style={{ width: '75%', maxWidth: '800px' }}>
+            <SpotifyPlayer
+              size={{ height: '80px', width: '100%' }}
+              uri="spotify:track:1dHbJMZhZiN3tUfHg8NRjR"
+            />
+          </div>
         </div>
 
         <div
@@ -112,10 +115,12 @@ function App () {
             marginTop: '30px'
           }}
         >
-          <SpotifyPlayer
-            size={{ height: '80px', width: '75%' }}
-            uri="spotify:track:6TEk7dTCl7wqQRVBSkKhik"
-          />
+          <div style={{ width: '75%', maxWidth: '800px' }}>
+            <SpotifyPlayer
+              size={{ height: '80px', width: '100%' }}
+              uri="spotify:track:6TEk7dTCl7wqQRVBSkKhik"
+            />
+          </div>
         </div>
 
         {link(
