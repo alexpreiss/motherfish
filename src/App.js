@@ -1,49 +1,83 @@
 import React from 'react'
 import SpotifyPlayer from 'react-spotify-player'
 
-import blood from './images/blood.jpg'
+import paper from './images/paper.png'
+import guitarMan from './images/guitarman.png'
+import kojiro from './images/kojiro.png'
+import alexpreiss from './images/alexpreiss.png'
 import spotifyLogo from './images/logo-spotify.png'
-import appleMusicLogo from './images/logo-apple-music.png'
+import spotifyText from './images/spotify-text.jpg'
+import appleMusicLogo from './images/itunes.png'
+import appleMusicText from './images/itunes-text.png'
 import youtubeLogo from './images/logo-youtube.png'
+import youtubeText from './images/youtube-text.png'
 import soundcloudLogo from './images/logo-sound-cloud.png'
+import soundcloudText from './images/soundcloud-text.png'
 import instagramLogo from './images/logo-instagram.png'
+import instagramText from './images/instagram-text.png'
 import tiktokLogo from './images/logo-tiktok.png'
-import twitchLogo from './images/logo-twitch.png'
+import tiktokText from './images/tiktok-text.png'
 
-function link (href, imgSrc, text) {
+// function link (href, imgSrc, text) {
+//   return (
+//     <a
+//       href={href}
+//       style={{
+//         width: '75%',
+//         maxWidth: '800px',
+//         background: 'white',
+//         marginTop: '30px',
+//         color: 'black',
+//         display: 'flex',
+//         alignItems: 'center',
+//         padding: '20px 0px',
+//         justifyContent: 'space-around',
+//         textDecoration: 'none'
+//       }}
+//     >
+//       <div
+//         style={{
+//           width: '33%',
+//           display: 'flex',
+//           alignItems: 'center'
+//         }}
+//       >
+//         <img
+//           alt="spotify logo"
+//           src={imgSrc}
+//           style={{ height: '40px', marginLeft: '20px' }}
+//         />
+//       </div>
+//       <div style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}>
+//         <div>{text}</div>
+//       </div>
+//       <div style={{ width: '33%', color: 'white' }}></div>
+//     </a>
+//   )
+// }
+
+function link (href, icon, text) {
   return (
     <a
-      href={href}
       style={{
-        width: '75%',
+        width: '80%',
         maxWidth: '800px',
-        background: 'white',
-        marginTop: '30px',
-        color: 'black',
         display: 'flex',
-        alignItems: 'center',
-        padding: '20px 0px',
         justifyContent: 'space-around',
-        textDecoration: 'none'
+        backgroundImage: `url(${paper})`,
+        marginTop: '30px',
+        alignItems: 'center',
+        padding: '10px 20px 10px 20px'
       }}
+      href={href}
     >
-      <div
-        style={{
-          width: '33%',
-          display: 'flex',
-          alignItems: 'center'
-        }}
-      >
-        <img
-          alt="spotify logo"
-          src={imgSrc}
-          style={{ height: '40px', marginLeft: '20px' }}
-        />
+      <div style={{ width: '33%' }}>
+        <img src={icon} alt="itunes logo" style={{ height: '40px' }} />
       </div>
-      <div style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}>
-        <div>{text}</div>
+      <div style={{ width: '33%' }}>
+        <img src={text} alt="itunes text" style={{ height: '40px' }} />
       </div>
-      <div style={{ width: '33%', color: 'white' }}></div>
+      <div style={{ width: '33%' }}></div>
     </a>
   )
 }
@@ -58,8 +92,8 @@ function App () {
           width: '100%',
           height: '100vh'
         }}
-        alt="blood"
-        src={blood}
+        alt="paper"
+        src={paper}
       />
 
       <div
@@ -86,9 +120,30 @@ function App () {
           paddingBottom: '150px'
         }}
       >
-        <div style={{ marginTop: '50px', fontSize: '30px' }}>
-          {' '}
-          alex preiss || motherfish
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            width: '95%',
+            marginTop: '30px',
+            maxWidth: '800px'
+          }}
+        >
+          <img
+            style={{ width: '20%', objectFit: 'scale-down' }}
+            alt="drawing of face"
+            src={kojiro}
+          />
+          <img
+            style={{ width: '50%', objectFit: 'scale-down' }}
+            alt="alex preiss"
+            src={alexpreiss}
+          />
+          <img
+            style={{ width: '25%', objectFit: 'scale-down' }}
+            alt="guitar player"
+            src={guitarMan}
+          />
         </div>
 
         <div
@@ -99,7 +154,7 @@ function App () {
             marginTop: '30px'
           }}
         >
-          <div style={{ width: '75%', maxWidth: '800px' }}>
+          <div style={{ width: '80%', maxWidth: '800px' }}>
             <SpotifyPlayer
               size={{ height: '80px', width: '100%' }}
               uri="spotify:track:1dHbJMZhZiN3tUfHg8NRjR"
@@ -115,7 +170,7 @@ function App () {
             marginTop: '30px'
           }}
         >
-          <div style={{ width: '75%', maxWidth: '800px' }}>
+          <div style={{ width: '80%', maxWidth: '800px' }}>
             <SpotifyPlayer
               size={{ height: '80px', width: '100%' }}
               uri="spotify:track:6TEk7dTCl7wqQRVBSkKhik"
@@ -126,67 +181,30 @@ function App () {
         {link(
           'https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg',
           spotifyLogo,
-          'Spotify'
+          spotifyText
         )}
 
         {link(
           'https://music.apple.com/us/artist/alex-preiss/1555415354',
           appleMusicLogo,
-          'Apple Music'
+          appleMusicText
         )}
 
-        {link('https://www.twitch.tv/mothermish/', twitchLogo, 'Twitch')}
-
-        {link('https://www.youtube.com/c/motherfish', youtubeLogo, 'YouTube')}
+        {link('https://www.youtube.com/c/motherfish', youtubeLogo, youtubeText)}
 
         {link(
           'https://soundcloud.com/alexspreiss',
           soundcloudLogo,
-          'SoundCloud'
+          soundcloudText
         )}
 
-        {link('https://www.tiktok.com/@alex.preiss/', tiktokLogo, 'TikTok')}
+        {link('https://www.tiktok.com/@alex.preiss/', tiktokLogo, tiktokText)}
 
         {link(
           'https://instagram.com/alex._.preiss',
           instagramLogo,
-          'Instagram'
+          instagramText
         )}
-
-        {
-          // <div
-          //   style={{
-          //     marginTop: '75px',
-          //     backgroundColor: 'rgba(255, 255, 255)',
-          //     color: 'black',
-          //     width: '70%',
-          //     display: 'flex',
-          //     flexDirection: 'column',
-          //     alignItems: 'center',
-          //     padding: '20px 20px',
-          //     fontSize: '25px',
-          //     fontFamily: 'Oswald, sans-serif'
-          //   }}
-          // >
-          //   Music
-          // </div>
-          // <div
-          //   style={{
-          //     marginTop: '50px',
-          //     backgroundColor: 'rgba(255, 255, 255)',
-          //     color: 'black',
-          //     width: '70%',
-          //     display: 'flex',
-          //     flexDirection: 'column',
-          //     alignItems: 'center',
-          //     padding: '30px 20px',
-          //     fontSize: '14px',
-          //     fontFamily: "'Press Start 2P', cursive"
-          //   }}
-          // >
-          //   Live Stream
-          // </div>
-        }
       </div>
     </div>
   )
