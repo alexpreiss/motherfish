@@ -6,81 +6,79 @@ import guitarMan from './images/guitarman.png'
 import kojiro from './images/kojiro.png'
 import alexpreiss from './images/alexpreiss.png'
 import spotifyLogo from './images/logo-spotify.png'
-import spotifyText from './images/spotify-text.jpg'
-import appleMusicLogo from './images/itunes.png'
-import appleMusicText from './images/itunes-text.png'
+import appleMusicLogo from './images/logo-apple-music.png'
 import youtubeLogo from './images/logo-youtube.png'
-import youtubeText from './images/youtube-text.png'
 import soundcloudLogo from './images/logo-sound-cloud.png'
-import soundcloudText from './images/soundcloud-text.png'
 import instagramLogo from './images/logo-instagram.png'
-import instagramText from './images/instagram-text.png'
 import tiktokLogo from './images/logo-tiktok.png'
-import tiktokText from './images/tiktok-text.png'
+import dcfn from './images/dcfn1.png'
 
-// function link (href, imgSrc, text) {
-//   return (
-//     <a
-//       href={href}
-//       style={{
-//         width: '75%',
-//         maxWidth: '800px',
-//         background: 'white',
-//         marginTop: '30px',
-//         color: 'black',
-//         display: 'flex',
-//         alignItems: 'center',
-//         padding: '20px 0px',
-//         justifyContent: 'space-around',
-//         textDecoration: 'none'
-//       }}
-//     >
-//       <div
-//         style={{
-//           width: '33%',
-//           display: 'flex',
-//           alignItems: 'center'
-//         }}
-//       >
-//         <img
-//           alt="spotify logo"
-//           src={imgSrc}
-//           style={{ height: '40px', marginLeft: '20px' }}
-//         />
-//       </div>
-//       <div style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}>
-//         <div>{text}</div>
-//       </div>
-//       <div style={{ width: '33%', color: 'white' }}></div>
-//     </a>
-//   )
-// }
-
-function link (href, icon, text) {
+function link (href, imgSrc, text) {
   return (
     <a
-      style={{
-        width: '80%',
-        maxWidth: '800px',
-        display: 'flex',
-        justifyContent: 'space-around',
-        backgroundImage: `url(${paper})`,
-        marginTop: '30px',
-        alignItems: 'center',
-        padding: '10px 20px 10px 20px'
-      }}
       href={href}
+      style={{
+        width: '75%',
+        maxWidth: '800px',
+        background: 'white',
+        marginTop: '30px',
+        color: 'black',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '20px 0px',
+        justifyContent: 'space-around',
+        textDecoration: 'none',
+        backgroundColor: 'rgba(235, 64, 52, 0)',
+        boxShadow: '0px 1px 1px 0px black',
+        borderRadius: '10px'
+      }}
     >
-      <div style={{ width: '33%' }}>
-        <img src={icon} alt="itunes logo" style={{ height: '40px' }} />
+      <div
+        style={{
+          width: '33%',
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+        <img
+          alt="spotify logo"
+          src={imgSrc}
+          style={{ height: '40px', marginLeft: '20px' }}
+        />
       </div>
-      <div style={{ width: '33%' }}>
-        <img src={text} alt="itunes text" style={{ height: '40px' }} />
+      <div style={{ width: '33%', textAlign: 'center', fontWeight: 'bold' }}>
+        <div>{text}</div>
       </div>
-      <div style={{ width: '33%' }}></div>
+      <div style={{ width: '33%', color: 'white' }}></div>
     </a>
   )
 }
+
+// function link (href, icon, text) {
+//   return (
+//     <a
+//       style={{
+//         width: '80%',
+//         maxWidth: '800px',
+//         display: 'flex',
+//         justifyContent: 'space-around',
+//         backgroundImage: `url(${paper})`,
+//         marginTop: '30px',
+//         alignItems: 'center',
+//         padding: '10px 20px 10px 20px'
+//       }}
+//       href={href}
+//     >
+//       <div style={{ width: '33%' }}>
+//         <img src={icon} alt="itunes logo" style={{ height: '40px' }} />
+//       </div>
+//       <div style={{ width: '33%' }}>
+//         <img src={text} alt="itunes text" style={{ height: '40px' }} />
+//       </div>
+//       <div style={{ width: '33%' }}></div>
+//     </a>
+//   )
+// }
 
 function App () {
   return (
@@ -178,32 +176,34 @@ function App () {
           </div>
         </div>
 
+        {link('https://ffm.to/dcfn', dcfn, 'D,C,FN pre-save')}
+
         {link(
           'https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg',
           spotifyLogo,
-          spotifyText
+          'Spotify'
         )}
 
         {link(
           'https://music.apple.com/us/artist/alex-preiss/1555415354',
           appleMusicLogo,
-          appleMusicText
+          'Apple Music'
         )}
 
-        {link('https://www.youtube.com/c/motherfish', youtubeLogo, youtubeText)}
+        {link('https://www.youtube.com/c/alexfuck', youtubeLogo, 'YouTube')}
 
         {link(
           'https://soundcloud.com/alexspreiss',
           soundcloudLogo,
-          soundcloudText
+          'Soundcloud'
         )}
 
-        {link('https://www.tiktok.com/@alex.preiss/', tiktokLogo, tiktokText)}
+        {link('https://www.tiktok.com/@alex.preiss/', tiktokLogo, 'TikTok')}
 
         {link(
           'https://instagram.com/alex._.preiss',
           instagramLogo,
-          instagramText
+          'Instagram'
         )}
       </div>
     </div>
