@@ -28,8 +28,8 @@ function link (href, imgSrc, text) {
         padding: '20px 0px',
         justifyContent: 'space-around',
         textDecoration: 'none',
-        backgroundColor: 'rgba(235, 64, 52, 0)',
-        boxShadow: '0px 1px 1px 0px black',
+        // backgroundColor: 'rgba(235, 64, 52, 0)',
+        // boxShadow: '0px 1px 1px 0px black',
         borderRadius: '10px'
       }}
     >
