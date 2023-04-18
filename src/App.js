@@ -155,6 +155,34 @@ function App () {
           </div>
         </div>
 
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '30px'
+          }}
+        >
+          <div
+            style={{
+              width: '80%',
+              maxWidth: '800px',
+              display: 'flex',
+              justifyContent: 'center'
+            }}
+          >
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/videoseries?list=PLUjGOk0IMHGTqKVZ4TG9VhIerEx3qstag"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         {link(
           'https://www.youtube.com/channel/UCKx3YtPJvUL9EZI2FC95q5w',
           youtubeLogo,
