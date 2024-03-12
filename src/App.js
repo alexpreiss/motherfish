@@ -8,7 +8,6 @@ import appleMusicLogo from './images/logo-apple-music.png'
 import youtubeLogo from './images/logo-youtube.png'
 import soundcloudLogo from './images/logo-sound-cloud.png'
 import instagramLogo from './images/logo-instagram.png'
-import tiktokLogo from './images/logo-tiktok.png'
 
 function link (href, imgSrc, text) {
   return (
