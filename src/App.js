@@ -79,16 +79,25 @@ function link (href, imgSrc, text) {
 function App () {
   return (
     <div style={{ position: 'relative' }}>
-      <img
+      <div
         style={{
           position: 'fixed',
-          overflow: 'hidden',
-          width: '100%',
-          height: '100vh'
+          top: '0',
+          right: '0',
+          bottom: '0',
+          left: '0'
         }}
-        alt="paper"
-        src={waterTemple}
-      />
+      >
+        <img
+          style={{
+            // objectFit: 'cover',
+            height: '100vh'
+          }}
+          alt="paper"
+          className="backgroundImage"
+          src={waterTemple}
+        />
+      </div>
 
       <div
         style={{
