@@ -146,7 +146,7 @@ function App () {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/MIHdEdfTgYM"
+              src="https://www.youtube.com/watch?v=LO8c1YIgyi4"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -174,7 +174,7 @@ function App () {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/videoseries?list=PLUjGOk0IMHGTqKVZ4TG9VhIerEx3qstag"
+              src="https://youtu.be/3Hx9Nj6BkHs?si=gU6_tnYs1oDznd1W"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -189,7 +189,7 @@ function App () {
           'YouTube'
         )}
 
-        {link('https://soundcloud.com/alexfuck', soundcloudLogo, 'Soundcloud')}
+        {link('https://soundcloud.com/orbweavr', soundcloudLogo, 'Soundcloud')}
 
         {link(
           'https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg',
@@ -198,18 +198,10 @@ function App () {
         )}
 
         {link(
-          'https://open.spotify.com/artist/5orDqEWdsiG6KcltddRwRq',
-          spotifyLogo,
-          'Spotify (shyman)'
-        )}
-
-        {link(
           'https://music.apple.com/us/artist/alex-preiss/1555415354',
           appleMusicLogo,
           'Apple Music'
         )}
-
-        {link('https://www.tiktok.com/@alex.preiss/', tiktokLogo, 'TikTok')}
 
         {link(
           'https://instagram.com/alex._.preiss',
