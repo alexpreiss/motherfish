@@ -145,7 +145,7 @@ function App () {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/watch?v=LO8c1YIgyi4"
+              src="https://www.youtube.com/embed/LO8c1YIgyi4?si=iBKo8cRrPaPnbb7f"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -173,7 +173,7 @@ function App () {
             <iframe
               width="560"
               height="315"
-              src="https://youtu.be/3Hx9Nj6BkHs?si=gU6_tnYs1oDznd1W"
+              src="https://www.youtube.com/embed/3Hx9Nj6BkHs?si=3AdhsW_QvM-VS3vR"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
