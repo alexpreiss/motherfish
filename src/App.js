@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
 // import SpotifyPlayer from 'react-spotify-player'
 
 import waterTemple from './images/water-temple.jpg'
@@ -76,149 +77,182 @@ function link (href, imgSrc, text) {
 //   )
 // }
 
-function App () {
-  return (
-    <div style={{ position: 'relative' }}>
-      <div
-        style={{
-          position: 'fixed',
-          top: '0',
-          right: '0',
-          bottom: '0',
-          left: '0'
-        }}
-      >
-        <img
-          style={{
-            // objectFit: 'cover',
-            height: '100vh'
-          }}
-          alt="paper"
-          className="backgroundImage"
-          src={waterTemple}
-        />
-      </div>
+class VideoPlayer extends React.Component {
+  constructor (props) {
+    super(props)
 
+    this.state = {
+      playing: false
+    }
+  }
+
+  render () {
+    return (
       <div
         style={{
-          background: 'black',
-          opacity: '.3',
-          position: 'fixed',
-          zIndex: '2',
-          top: '0',
-          right: '0',
-          bottom: '0',
-          left: '0'
-        }}
-      ></div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          position: 'absolute',
-          color: 'white',
-          zIndex: '3',
+          marginTop: '18px',
           width: '100%',
-          paddingBottom: '150px'
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'flex-end',
+          position: 'relative'
         }}
       >
+        <ReactPlayer
+          style={{
+            width: '100%'
+          }}
+          playing={this.state.playing}
+          url={
+            'https://firebasestorage.googleapis.com/v0/b/club-cyberia.appspot.com/o/website%20draft1.mp4?alt=media&token=22167d1d-7eb9-493d-80c1-d6840855a8ac'
+          }
+          playsinline={true}
+        />
         <div
           style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            width: '95%',
-            marginTop: '30px',
-            maxWidth: '800px'
+            position: 'absolute',
+            background: 'black',
+            padding: '5px 10px 5px 10px',
+            marginLeft: '312px'
           }}
+          onClick={() =>
+            this.setState(prevState => ({
+              playing: !prevState.playing
+            }))
+          }
         >
-          <div style={{ color: 'white' }}>alex preiss</div>
+          {this.state.playing ? 'pause' : 'play'}
         </div>
-
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            marginTop: '30px'
-          }}
-        >
-          <div
-            style={{
-              width: '80%',
-              maxWidth: '800px',
-              display: 'flex',
-              justifyContent: 'center'
-            }}
-          >
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/LO8c1YIgyi4?si=iBKo8cRrPaPnbb7f"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            marginTop: '30px'
-          }}
-        >
-          <div
-            style={{
-              width: '80%',
-              maxWidth: '800px',
-              display: 'flex',
-              justifyContent: 'center'
-            }}
-          >
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/3Hx9Nj6BkHs?si=3AdhsW_QvM-VS3vR"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-
-        {link(
-          'https://www.youtube.com/channel/UCKx3YtPJvUL9EZI2FC95q5w',
-          youtubeLogo,
-          'YouTube'
-        )}
-
-        {link('https://soundcloud.com/orbweavr', soundcloudLogo, 'Soundcloud')}
-
-        {link(
-          'https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg',
-          spotifyLogo,
-          'Spotify'
-        )}
-
-        {link(
-          'https://music.apple.com/us/artist/alex-preiss/1555415354',
-          appleMusicLogo,
-          'Apple Music'
-        )}
-
-        {link(
-          'https://instagram.com/alex._.preiss',
-          instagramLogo,
-          'Instagram'
-        )}
       </div>
-    </div>
-  )
+    )
+  }
+}
+
+class App extends React.Component {
+  render () {
+    return (
+      <div style={{ position: 'relative' }}>
+        <div
+          style={{
+            position: 'fixed',
+            top: '0',
+            right: '0',
+            bottom: '0',
+            left: '0'
+          }}
+        >
+          <img
+            style={{
+              // objectFit: 'cover',
+              height: '100vh'
+            }}
+            alt="paper"
+            className="backgroundImage"
+            src={waterTemple}
+          />
+        </div>
+
+        <div
+          style={{
+            background: 'black',
+            opacity: '.3',
+            position: 'fixed',
+            zIndex: '2',
+            top: '0',
+            right: '0',
+            bottom: '0',
+            left: '0'
+          }}
+        ></div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            position: 'absolute',
+            color: 'white',
+            zIndex: '3',
+            width: '100%',
+            paddingBottom: '150px'
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-around',
+              width: '95%',
+              marginTop: '30px',
+              maxWidth: '800px'
+            }}
+          >
+            <div style={{ color: 'white' }}>alex preiss</div>
+          </div>
+
+          <VideoPlayer />
+
+          {
+            // <div
+            //   style={{
+            //     width: '100%',
+            //     display: 'flex',
+            //     justifyContent: 'center',
+            //     marginTop: '30px'
+            //   }}
+            // >
+            // <div
+            //   style={{
+            //     width: '80%',
+            //     maxWidth: '800px',
+            //     display: 'flex',
+            //     justifyContent: 'center'
+            //   }}
+            // >
+            // <iframe
+            //   width="560"
+            //   height="315"
+            //   src="https://www.youtube.com/embed/3Hx9Nj6BkHs?si=3AdhsW_QvM-VS3vR"
+            //   title="YouTube video player"
+            //   frameBorder="0"
+            //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            //   allowFullScreen
+            // ></iframe>
+            // </div>
+            // </div>
+          }
+
+          {link(
+            'https://www.youtube.com/channel/UCKx3YtPJvUL9EZI2FC95q5w',
+            youtubeLogo,
+            'YouTube'
+          )}
+
+          {link(
+            'https://soundcloud.com/orbweavr',
+            soundcloudLogo,
+            'Soundcloud'
+          )}
+
+          {link(
+            'https://open.spotify.com/artist/2LSPkV9a9Gsk4xMWSkLUov?si=0rwgXikEQMqYccULI45CSg',
+            spotifyLogo,
+            'Spotify'
+          )}
+
+          {link(
+            'https://music.apple.com/us/artist/alex-preiss/1555415354',
+            appleMusicLogo,
+            'Apple Music'
+          )}
+
+          {link(
+            'https://instagram.com/alex._.preiss',
+            instagramLogo,
+            'Instagram'
+          )}
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App
